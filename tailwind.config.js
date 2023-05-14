@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'league-spartan': ['League Spartan', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +17,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      opacity: ['hover'],
+    },
+  },
   plugins: [],
-}
+};

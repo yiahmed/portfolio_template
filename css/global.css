@@ -3,5 +3,52 @@
 @tailwind utilities;
 
 body {
-margin: 0;
+  margin: 0;
+}
+
+.h2:hover .glow-bar {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 0 15px 5px rgb(134, 93, 255); /* Updated glow effect */
+}
+
+.glow-bar {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 0 5px 0 rgb(134, 93, 255);
+  animation: slideRightToLeft 2s forwards; /* Animation for rendering from right to left */
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.glow-image {
+  position: relative;
+}
+
+.glow-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(240, 235, 141);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.glow-image:hover::before {
+  opacity: 1;
+}
+
+.image-glow-yellow {
+  filter: drop-shadow(0 0 10px rgb(240, 235, 141));
 }

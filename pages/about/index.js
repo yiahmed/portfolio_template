@@ -6,19 +6,19 @@ const aboutInfo = [
   {
     title: "About me",
     image: yahyaImg,
-    description: "I am a software engineer with a passion for building things. I am a software engineer with a passion for building things. I am a software engineer with a passion for building things.",
+    description: "Hi there! I am a full-stack developer with a passion for problem-solving and being creative. I am also a fitness enthusiast who enjoys pushing my limits and staying active. As a developer, I am constantly looking for new challenges and opportunities to grow my skills.",
   },
   {
     title: "skills",
-    image: null,
+    image: yahyaImg,
     description:
-      "I am a software engineer with a  passion for building things.",
+      "Currently, I am actively seeking internships to further my knowledge and gain practical experience in the field. One quote that I live by is 'There is no elevator to success, You have to take the stairs' by Zig Ziglar. This quote motivates me to work hard and persevere through any obstacles that come my way.",
   },
   {
     title: "interest",
-    image: null,
+    image: yahyaImg,
     description:
-      "I am a software engineer with a  passion for building things.",
+      "I believe that with dedication and hard work, anything is possible, and I am excited to see where my journey as a developer takes me.",
   },
 ];
 const About = () => {
@@ -26,6 +26,7 @@ const About = () => {
     <>
     {aboutInfo.map((info, index) => {
       return (
+        <>
         <GreetingContainer
           key={index}
           index={index}
@@ -33,6 +34,7 @@ const About = () => {
           text={info.description}
           title={info.title}
         />
+        </>
       );
     })}
   </>
