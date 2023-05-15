@@ -1,4 +1,5 @@
 import GreetingContainer from "@/components/shared/container/greeting/greetingContainer";
+import TechStackContainer from "@/components/shared/container/techstack/techStackContainer";
 import React from "react";
 
 const yahyaImg = "/IMG_2584.jpg";
@@ -6,7 +7,8 @@ const aboutInfo = [
   {
     title: "About me",
     image: yahyaImg,
-    description: "Hi there! I am a full-stack developer with a passion for problem-solving and being creative. I am also a fitness enthusiast who enjoys pushing my limits and staying active. As a developer, I am constantly looking for new challenges and opportunities to grow my skills.",
+    description:
+      "Hi there! I am a full-stack developer with a passion for problem-solving and being creative. I am also a fitness enthusiast who enjoys pushing my limits and staying active. As a developer, I am constantly looking for new challenges and opportunities to grow my skills.",
   },
   {
     title: "skills",
@@ -24,20 +26,21 @@ const aboutInfo = [
 const About = () => {
   return (
     <>
-    {aboutInfo.map((info, index) => {
-      return (
-        <>
-        <GreetingContainer
-          key={index}
-          index={index}
-          image={info.image}
-          text={info.description}
-          title={info.title}
-        />
-        </>
-      );
-    })}
-  </>
+      {aboutInfo.map((info, index) => {
+        return (
+          <>
+            <GreetingContainer
+              key={index}
+              index={index}
+              image={info.image}
+              text={info.description}
+              title={info.title}
+            />
+          </>
+        );
+      })}
+      <TechStackContainer />
+    </>
   );
 };
 
