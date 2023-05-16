@@ -9,14 +9,14 @@ body {
 .h2:hover .glow-bar {
   width: 100%;
   opacity: 1;
-  box-shadow: 0 0 15px 5px rgb(134, 93, 255); /* Updated glow effect */
+  box-shadow: 0 0 15px 5px rgb(134, 93, 255);
 }
 
 .glow-bar {
   width: 100%;
   opacity: 1;
   box-shadow: 0 0 5px 0 rgb(134, 93, 255);
-  animation: slideRightToLeft 2s forwards; /* Animation for rendering from right to left */
+  animation: slideRightToLeft 2s forwards;
 }
 
 @keyframes slideRightToLeft {

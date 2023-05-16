@@ -1,36 +1,17 @@
 import Link from "next/link";
 import React from "react";
+import StyledLink from "./navbar-components/styledLink";
 
 const Navbar = () => {
   return (
     <div
       style={{ height: "7vh" }}
-      className="flex items-center w-full px-4 space-x-4 border border-gray-200 shadow-md"
+      className="flex items-center justify-center h-full w-full px-4 space-x-4 border bg-[#03001C] shadow-md"
     >
-      <Link
-        className="text-xl font-bold underline hover:text-blue-500"
-        href={"/"}
-      >
-        Home
-      </Link>
-      <Link
-        className="text-xl font-bold underline hover:text-blue-500"
-        href={"/about"}
-      >
-        About
-      </Link>
-      <Link
-        className="text-xl font-bold underline hover:text-blue-500"
-        href={"/contact"}
-      >
-        Contact
-      </Link>
-      <Link
-        className="text-xl font-bold underline hover:text-blue-500"
-        href={"/project"}
-      >
-        Project
-      </Link>
+      <StyledLink href={"/"} text={"Home"} />
+      <StyledLink href={"/about"} text={"About"} />
+      <StyledLink href={"/project"} text={"Projects"} />
+      <StyledLink href={"/contact"} text={"Contact"} />
     </div>
   );
 };
