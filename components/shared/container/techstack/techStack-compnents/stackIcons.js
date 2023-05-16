@@ -68,8 +68,8 @@ const StackIcons = () => {
           <div
             key={index}
             className={`flex items-center space-x-3 ${
-              index % 2 === 1 ? "pl-24" : ""
-            }`}
+              index % 2 === 1 ? "pl-12 sm:pl-12 md:pl-24 lg:pl-24" : ""
+            }`} 
           >
             {icon.icon.endsWith(".svg") ? (
               <img src={icon.icon} alt={icon.name} width={35} />
