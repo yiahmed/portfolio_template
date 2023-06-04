@@ -17,11 +17,11 @@ const StyledLink = ({ href, text }) => {
   console.log(router.pathname);
 
   return (
-    <div className="w-full md:w-auto" >
+    <div className="w-full md:w-auto">
       <Link href={href}>
         <StyledButton
           className="text-white border shadow-md rounded-lg"
-          variant="text"
+          variant="outlined"
           size="small"
         >
           <LinkTitle text={text} />
