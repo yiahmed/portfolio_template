@@ -1,8 +1,12 @@
-import GreetingContainer from "@/components/shared/container/greeting/greetingContainer";
+import ContactForm from "@/components/contact form/contactForm";
 import React from "react";
 
 const index = () => {
-  return <div>Contact</div>
+  return (
+    <div className="h-full w-full flex flex-col justify-center items-center">
+      <ContactForm />
+    </div>
+  );
 };
 
 export default index;
