@@ -22,6 +22,10 @@ const ContactForm = () => {
         "DIQZ5ce73oM6IPQS-"
       );
       toast.success("Email sent successfully");
+
+      if (Object.keys(errors).length > 0) {
+        throw new Error("Form validation error");
+      }
       // Do something after the email is sent, e.g., show a success message or redirect to another page
     } catch (error) {
       toast.error("Failed to send email");
