@@ -103,19 +103,23 @@ const ContactForm = () => {
             <textarea
               {...register("message", {
                 required: "This is a required field",
-                minLength: 10,
+                minLength: {
+                  value: 10,
+                  message: "Message must be at least 10 characters long",
+                },
               })}
               className={`shadow appearance-none rounded w-full h-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline border ${
                 isSubmitClicked && errors.message ? "border-red-500" : ""
               }`}
               placeholder="Your message here"
             />
-            {errors.message && isSubmitClicked && (
+            {errors.message?.message && isSubmitClicked && (
               <p className="text-red-500 text-xs italic">
                 {errors.message.message}
               </p>
             )}
           </div>
+
           <div className="flex items-center justify-center py-10">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
