@@ -45,7 +45,7 @@ const ContactForm = () => {
       <div className="w-1/3 h-5/6">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-slate-400 h-full shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col justify-center"
+          className="bg-slate-400 h-full shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 flex flex-col justify-center"
           ref={form}
         >
           <div className="mb-4">
