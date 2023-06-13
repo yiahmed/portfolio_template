@@ -1,10 +1,11 @@
 import * as React from "react";
+import { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import { PropaneTank } from "@mui/icons-material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const yahyaImg = "/IMG_2584.jpg";
 const sportsApplication = "/sports-application.png";
@@ -17,10 +18,15 @@ const projectInfo = [
 ];
 
 const ProjectCards = () => {
+  const [showIcons, setShowIcons] = useState(false);
+  const handleGitHubClick = () => {
+    window.open("https://github.com/yiahmed", "_blank");
+  };
+
   return (
     <>
       {projectInfo.map((project, index) => (
-        <div className="border-2 border-rose-500" key={index}>
+        <div key={index}>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -39,8 +45,11 @@ const ProjectCards = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                These will be GitHub links
+              <Button onClick={handleGitHubClick}>
+                <GitHubIcon
+                  className={`text-3xl sm:text-3xl text-black  cursor-pointer`}
+                  style={{ animationDelay: "1s" }}
+                />
               </Button>
             </CardActions>
           </Card>
