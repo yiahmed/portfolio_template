@@ -41,14 +41,17 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="h-full w-screen flex flex-col items-center justify-center">
-      <div className="w-1/3 h-3/4">
+    <div className="h-full w-screen flex items-center justify-center">
+      <div className="w-1/3 h-5/6 animate-fade">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white h-full shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-slate-400 h-full shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 flex flex-col justify-center"
           ref={form}
         >
           <div className="mb-4">
+            <div className="flex items-center justify-center mb-4">
+              <h1 className="text-2xl font-bold">Get In Touch</h1>
+            </div>
             <div className="py-3">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -66,7 +69,7 @@ const ContactForm = () => {
                 placeholder="Please enter your name"
               />
               {errors.name && isSubmitClicked && (
-                <p className="text-red-500 text-xs italic">
+                <p className="text-red-500 text-xs italic my-1">
                   {errors.name.message}
                 </p>
               )}
@@ -100,38 +103,40 @@ const ContactForm = () => {
               )}
             </div>
           </div>
-          <div className="mb-6 h-1/3">
+          <div className="mb-7 h-1/3">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Message
             </label>
-            <textarea
-              {...register("message", {
-                required: "This is a required field",
-                minLength: {
-                  value: 10,
-                  message: "Message must be at least 10 characters long",
-                },
-              })}
-              className={`shadow appearance-none rounded w-full h-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline border ${
-                isSubmitClicked && errors.message ? "border-red-500" : ""
-              }`}
-              placeholder="Your message here"
-            />
-            {errors.message?.message && isSubmitClicked && (
-              <p className="text-red-500 text-xs italic">
-                {errors.message.message}
-              </p>
-            )}
+            <div className="relative">
+              <textarea
+                {...register("message", {
+                  required: "This is a required field",
+                  minLength: {
+                    value: 10,
+                    message: "Message must be at least 10 characters long",
+                  },
+                })}
+                className={`shadow appearance-none rounded w-full h-24 sm:h-32 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline border ${
+                  isSubmitClicked && errors.message ? "border-red-500" : ""
+                }`}
+                placeholder="Your message here"
+              />
+              {errors.message?.message && isSubmitClicked && (
+                <p className="text-red-500 text-xs italic absolute bottom-0 left-0 pt-2">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
           </div>
 
-          <div className="flex items-center justify-center py-10">
-            <button
+          <div className="flex items-center justify-center">
+            <Button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
               onClick={handleButtonClick}
             >
               Submit
-            </button>
+            </Button>
           </div>
         </form>
       </div>
