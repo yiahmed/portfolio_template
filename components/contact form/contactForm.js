@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
     <div className="h-full w-screen flex items-center justify-center">
-      <div className="w-1/3 h-5/6">
+      <div className="w-1/3 h-5/6 animate-fade">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="bg-slate-400 h-full shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 flex flex-col justify-center"
