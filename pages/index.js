@@ -30,6 +30,7 @@ const Home = () => {
       typeSpeed: 80,
       backSpeed: 60,
       backDelay: 600,
+      loop: true,
     });
 
     // Destropying
