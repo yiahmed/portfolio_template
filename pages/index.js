@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import Link from "next/link";
 
 const Home = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -19,16 +20,22 @@ const Home = () => {
   };
 
   const handleLinkedInClick = () => {
-    window.open("https://www.linkedin.com/in/yahya-ahmed-1780b7168/", "_blank");
+    window.open("https://www.linkedin.com/in/yahyaiahmed/", "_blank");
   };
 
+  const handleEmailClick = () => {};
+
   return (
-    <div className="text-white flex flex-col justify-center items-center text-center h-full w-full">
-      <h1 className="text-5xl sm:text-7xl font-bold animate-fade mb-4 tracking-tight">
-        Hey, I'm <br />
+    <div className="text-[#8892AF] flex flex-col justify-center items-center text-center h-full w-full">
+      <h1 className="text-2xl sm:text-4xl text-[#63FFDA] animate-fade mb-4 tracking-tight">
+        Hey, my name is: <br />
+      </h1>
+      <h1 className="animate-fade text-5xl sm:text-7xl font-bold mb-4 tracking-tight text-[#CCD6F5]">
         Yahya Ahmed
       </h1>
-      <h3 className="animate-fade">A Junior Full-Stack Developer</h3>
+      <h3 className="animate-fade text-[#8892AF] font-bold text-3xl sm:text-5xl">
+        And I'm a Junior Full-Stack Developer
+      </h3>
       <div className="w-full py-7 space-x-16">
         <GitHubIcon
           className={`text-3xl sm:text-5xl animate-fade ${
@@ -44,12 +51,15 @@ const Home = () => {
           style={{ animationDelay: "1s" }}
           onClick={handleLinkedInClick}
         />
-        <EmailIcon
-          className={`text-3xl sm:text-5xl animate-fade ${
-            showIcons ? "" : "opacity-0"
-          }`}
-          style={{ animationDelay: "1s" }}
-        />
+        <Link href="/contact">
+          <EmailIcon
+            onClick={handleEmailClick}
+            className={`text-3xl sm:text-5xl animate-fade ${
+              showIcons ? "" : "opacity-0"
+            }`}
+            style={{ animationDelay: "1s" }}
+          />
+        </Link>
       </div>
     </div>
   );
