@@ -3,13 +3,12 @@ import Footer from "./footer/footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="w-screen h-screen ">
+    <div className="w-screen h-screen bg-[#0A1A2E] ">
       <Navbar />
-      <div
-        style={{ height: "93vh" }}
-        className="w-full"
-      >
-        <main className="h-full w-full overflow-auto flex flex-col items-center bg-[#03001C]" >{children}</main>
+      <div style={{ height: "93vh" }} className="w-full">
+        <main className="h-full w-full overflow-auto flex flex-col items-center bg-[#0A1A2E]">
+          {children}
+        </main>
       </div>
       {/* <Footer /> */}
     </div>

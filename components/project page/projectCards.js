@@ -10,12 +10,32 @@ import { Icon } from "@iconify/react";
 
 const projectInfo = [
   {
+    id: 1,
     title: "Sports Application",
     image: "/sports-application.png",
-    description: "test description",
+    description:
+      "With up-to-date information, our app offers a comprehensive view of the 2022/2023 postseason, showcasing the complete list of teams that have qualified for the playoffs. Stay ahead of the game by delving into detailed rosters and player statistics.",
     gitHubRepo: "https://github.com/yiahmed/counter-redux-typescript",
     vercelLink: "https://sports-application.vercel.app/nba-postseason",
   },
+  // {
+  //   id: 2,
+  //   title: "Portfolio",
+  //   image: "",
+  //   description:
+  //     "My portfolio site is built with NextJS, Material UI, TailwindCSS",
+  //   gitHubRepo: "",
+  //   vercelLink: "",
+  // },
+  // {
+  //   id: 3,
+  //   title: "AlphaPulse",
+  //   image: "",
+  //   description:
+  //     "LEARN Academy Capstone Project",
+  //   gitHubRepo: "",
+  //   vercelLink: "",
+  // },
 ];
 
 const ProjectCards = () => {
