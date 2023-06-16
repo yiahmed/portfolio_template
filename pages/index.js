@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
+import Typed from "typed.js";
 
 const Home = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -13,6 +14,28 @@ const Home = () => {
     }, 1000); // Delay the showing of icons by 1 second (adjust as needed) FIXME:
 
     return () => clearTimeout(timeoutId);
+  }, []);
+
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "Junior Full-Stack Developer.",
+        "Fitness Enthusiast.",
+        "Tester.",
+      ], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 600,
+      typeSpeed: 80,
+      backSpeed: 60,
+      backDelay: 600,
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
   }, []);
 
   const handleGitHubClick = () => {
@@ -34,8 +57,9 @@ const Home = () => {
         Yahya Ahmed
       </h1>
       <h3 className="animate-fade text-[#8892AF] font-bold text-3xl sm:text-5xl">
-        And I'm a Junior Full-Stack Developer
+        And I'm a <span ref={el}></span>
       </h3>
+
       <div className="w-full py-7 space-x-16">
         <GitHubIcon
           className={`text-3xl sm:text-5xl animate-fade ${
