@@ -63,18 +63,18 @@ const icons = [
 const StackIcons = () => {
   return (
     <>
-      <div className="text-white grid grid-cols-2 gap-4">
+      <div className="text-[#CCD6F5] grid grid-rows-4 grid-cols-4 gap-4">
         {icons.map((icon, index) => (
           <div
             key={index}
             className={`flex items-center space-x-3 ${
               index % 2 === 1 ? "pl-12 sm:pl-12 md:pl-24 lg:pl-24" : ""
-            }`} 
+            }`}
           >
             {icon.icon.endsWith(".svg") ? (
-              <img src={icon.icon} alt={icon.name} width={35} />
+              <img src={icon.icon} alt={icon.name} width={55} />
             ) : (
-              <Icon icon={icon.icon} width={35} />
+              <Icon icon={icon.icon} width={55} />
             )}
             <h3>{icon.name}</h3>
           </div>
@@ -85,5 +85,3 @@ const StackIcons = () => {
 };
 
 export default StackIcons;
-
-

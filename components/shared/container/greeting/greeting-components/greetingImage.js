@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-const GreetingImage = ({ image }) => {
+const yahyaImg = "/IMG_2584.jpg";
+
+const GreetingImage = () => {
   return (
     <div className="w-1/3 flex items-center justify-center m-5">
-      {image && (
+      {yahyaImg && (
         <div className="h-64 w-64 flex justify-center items-center relative glow-image">
           <Image
-            src={image}
+            src={yahyaImg}
             alt="profile picture"
             layout="fill"
             objectFit="cover"
