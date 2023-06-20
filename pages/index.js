@@ -20,16 +20,12 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [
-        "Junior Full-Stack Developer.",
-        "Fitness Enthusiast.",
-        "Tester.",
-      ], // Strings to display
+      strings: ["Full-Stack Developer.", "Fitness Enthusiast.", "Gamer."], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 600,
       typeSpeed: 80,
-      backSpeed: 60,
-      backDelay: 600,
+      backSpeed: 40,
+      backDelay: 1700,
       loop: true,
     });
 
@@ -51,7 +47,10 @@ const Home = () => {
 
   return (
     <div className="text-[#8892AF] flex flex-col justify-center items-center text-center h-full w-full">
-      <h1 className="text-2xl sm:text-4xl text-[#63FFDA] animate-fade mb-4 tracking-tight">
+      <h1
+        className="text-2xl sm:text-4xl text-[#63FFDA] animate-fade mb-4 tracking-tight"
+        style={{ fontFamily: "'Robot Mono', monospace" }}
+      >
         Hey, my name is: <br />
       </h1>
       <h1 className="animate-fade text-5xl sm:text-7xl font-bold mb-4 tracking-tight text-[#CCD6F5]">
