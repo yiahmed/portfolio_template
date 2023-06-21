@@ -57,7 +57,7 @@ const Home = () => {
         Yahya Ahmed
       </h1>
       <h3 className="animate-fade text-[#8892AF] font-bold text-3xl sm:text-5xl">
-        And I'm a <span ref={el}></span>
+        And I&apos;m a <span ref={el}></span>
       </h3>
 
       <div className="w-full py-7 space-x-16">
