@@ -51,7 +51,13 @@ const ProjectCards = () => {
     <>
       {projectInfo.map((project, index) => (
         <div key={index}>
-          <Card sx={{ maxWidth: 345 }} className="bg-[#1e1e1e] text-white">
+          <Card
+            sx={{
+              maxWidth: 345,
+              bgcolor: "#1e1e1e",
+              color: "white",
+            }}
+          >
             <CardActionArea>
               <CardMedia
                 component="img"
