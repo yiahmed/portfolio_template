@@ -20,7 +20,11 @@ const StyledLink = ({ href, text }) => {
     <div className="w-full md:w-auto">
       <Link href={href}>
         <StyledButton
-          className="text-white shadow-md rounded-lg"
+          sx={{
+            color: "white",
+            boxShadow: "md",
+            borderRadius: "lg",
+          }}
           variant="text"
           size="small"
         >
