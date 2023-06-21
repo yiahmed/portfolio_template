@@ -63,7 +63,7 @@ const icons = [
 const StackIcons = () => {
   return (
     <>
-      <div className="text-[#CCD6F5] grid grid-rows-4 grid-cols-4 gap-4">
+      <div className="text-[#CCD6F5] grid grid-cols-2 grid-rows-2 gap-4 sm:grid-cols-4 sm:grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-4">
         {icons.map((icon, index) => (
           <div
             key={index}

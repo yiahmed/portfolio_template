@@ -7,7 +7,7 @@ const GreetingImage = () => {
   return (
     <div className="w-1/3 flex items-center justify-center m-5">
       {yahyaImg && (
-        <div className="h-64 w-64 flex justify-center items-center relative glow-image">
+        <div className="h-64 w-64 flex justify-center items-center relative glow-image ">
           <Image
             src={yahyaImg}
             alt="profile picture"
