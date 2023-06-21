@@ -7,7 +7,7 @@ const GreetingText = () => {
         className="flex items-center justify-center h-full font-mono text-base text-center lg:text-left md:text-left md:ml-2 sm:text-center font-extrabold text-[#8892AF] p-4"
         style={{ fontFamily: "'League Spartan', sans-serif" }}
       >
-        <div>
+        <div className="overflow-auto max-h-[250px] ">
           <p>
             Hi there! I am a full-stack developer with a passion for
             problem-solving and being creative. I am also a fitness enthusiast
