@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "league-spartan": ["League Spartan", "sans-serif"],
+        "robot-mono": ["Robot Mono", "monospace"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -17,30 +18,30 @@ module.exports = {
       },
       keyframes: {
         fadeUp: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
           },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
           },
         },
         float: {
-          '0%': {
-            transform: 'translateY(0)',
+          "0%": {
+            transform: "translateY(0)",
           },
-          '50%': {
-            transform: 'translateY(-8px)',
+          "50%": {
+            transform: "translateY(-8px)",
           },
-          '100%': {
-            transform: 'translateY(0)',
+          "100%": {
+            transform: "translateY(0)",
           },
         },
       },
       animation: {
-        fade: 'fadeUp 1s',
-        float: 'float 1s ease-in-out infinite',
+        fade: "fadeUp 1s",
+        float: "float 1s ease-in-out infinite",
       },
     },
   },
