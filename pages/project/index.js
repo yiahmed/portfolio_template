@@ -10,7 +10,6 @@ const index = () => {
       </h1>
       <div className="flex space-x-10">
         <ProjectCards />
-        <ProjectCards />
       </div>
     </div>
   );
