@@ -18,15 +18,15 @@ const projectInfo = [
     gitHubRepo: "https://github.com/yiahmed/counter-redux-typescript",
     vercelLink: "https://sports-application.vercel.app/nba-postseason",
   },
-  // {
-  //   id: 2,
-  //   title: "Portfolio",
-  //   image: "",
-  //   description:
-  //     "My portfolio site is built with NextJS, Material UI, TailwindCSS",
-  //   gitHubRepo: "",
-  //   vercelLink: "",
-  // },
+  {
+    id: 2,
+    title: "My Portfolio",
+    image: "/portfolio.png",
+    description:
+      "My personal portfolio site is built with NextJS, Material UI, TailwindCSS",
+    gitHubRepo: "https://github.com/yiahmed/portfolio_template",
+    vercelLink: "https://my-portfolio-yiahmed.vercel.app/",
+  },
   // {
   //   id: 3,
   //   title: "AlphaPulse",
