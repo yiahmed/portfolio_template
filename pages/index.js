@@ -24,7 +24,7 @@ const Home = () => {
         "Full-Stack Developer.",
         "Fitness Enthusiast.",
         "Gamer.",
-        "Foodie",
+        "Foodie.",
         "Dreamer.",
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
