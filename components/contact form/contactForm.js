@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 const ContactForm = () => {
   const {
@@ -131,11 +132,15 @@ const ContactForm = () => {
 
           <div className="flex items-center justify-center">
             <Button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              style={{
+                backgroundColor: "#3B82F6",
+              }}
+              variant="contained"
+              endIcon={<SendIcon />}
               type="submit"
               onClick={handleButtonClick}
             >
-              Submit
+              Send
             </Button>
           </div>
         </form>
