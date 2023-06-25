@@ -20,7 +20,13 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Full-Stack Developer.", "Fitness Enthusiast.", "Gamer."], // Strings to display
+      strings: [
+        "Full-Stack Developer.",
+        "Fitness Enthusiast.",
+        "Gamer.",
+        "Foodie",
+        "Dreamer.",
+      ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 600,
       typeSpeed: 80,
@@ -60,28 +66,26 @@ const Home = () => {
         And I&apos;m a <span ref={el}></span>
       </h3>
 
-      <div className="w-full py-7 space-x-16">
+      <div className="w-full py-7 space-x-16 animate-fade">
         <GitHubIcon
-          className={`text-3xl sm:text-5xl animate-fade ${
+          className={`animate-fade ${
             showIcons ? "" : "opacity-0"
           } cursor-pointer`}
-          style={{ animationDelay: "1s" }}
+          style={{ animationDelay: "1s", fontSize: "2.5rem" }}
           onClick={handleGitHubClick}
         />
         <LinkedInIcon
-          className={`text-3xl sm:text-5xl animate-fade ${
+          className={`animate-fade ${
             showIcons ? "" : "opacity-0"
           } cursor-pointer`}
-          style={{ animationDelay: "1s" }}
+          style={{ animationDelay: "1s", fontSize: "2.5rem" }}
           onClick={handleLinkedInClick}
         />
         <Link href="/contact">
           <EmailIcon
             onClick={handleEmailClick}
-            className={`text-3xl sm:text-5xl animate-fade ${
-              showIcons ? "" : "opacity-0"
-            }`}
-            style={{ animationDelay: "1s" }}
+            className={`animate-fade ${showIcons ? "" : "opacity-0"}`}
+            style={{ animationDelay: "1s", fontSize: "2.5rem" }}
           />
         </Link>
       </div>
