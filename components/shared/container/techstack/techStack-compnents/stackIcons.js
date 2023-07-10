@@ -55,8 +55,16 @@ const icons = [
     icon: "/material-ui.svg",
   },
   {
-    name: "Sass",
-    icon: "/sass.svg",
+    name: "Laravel",
+    icon: "/laravel-dark.svg",
+  },
+  {
+    name: "PHP",
+    icon: "vscode-icons:file-type-php",
+  },
+  {
+    name: "MySQL",
+    icon: "/mysql.svg",
   },
 ];
 

@@ -48,9 +48,9 @@ const ProjectCards = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col md:flex-row lg:flex-row py-1">
       {projectInfo.map((project, index) => (
-        <div key={index}>
+        <div key={index} className="px-4 py-2 lg:py-0">
           <Card
             sx={{
               maxWidth: 345,
@@ -58,20 +58,18 @@ const ProjectCards = () => {
               color: "white",
             }}
           >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={project.image}
-                alt="test image"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {project.title}
-                </Typography>
-                <Typography variant="body2">{project.description}</Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={project.image}
+              alt="test image"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {project.title}
+              </Typography>
+              <Typography variant="body2">{project.description}</Typography>
+            </CardContent>
             <CardActions>
               <Button onClick={() => handleGitHubClick(project.gitHubRepo)}>
                 <GitHubIcon
@@ -91,7 +89,7 @@ const ProjectCards = () => {
           </Card>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
