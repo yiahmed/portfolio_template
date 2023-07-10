@@ -17,11 +17,11 @@ const GreetingText = () => {
           </p>
           <br></br>
           <p>
-            Currently, I am actively seeking internships to further my knowledge
-            and gain practical experience in the field. One quote that I live by
-            is &lsquo;There is no elevator to success, You have to take the
-            stairs&rsquo; by Zig Ziglar. This quote motivates me to work hard
-            and persevere through any obstacles that come my way.
+            Currently, I am actively seeking junior developer roles to further
+            my knowledge and gain practical experience in the field. One quote
+            that I live by is &lsquo;There is no elevator to success, You have
+            to take the stairs&rsquo; by Zig Ziglar. This quote motivates me to
+            work hard and persevere through any obstacles that come my way.
           </p>
           <br></br>
           <p>
