@@ -1,12 +1,10 @@
 import * as React from "react";
-import { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActions } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Icon } from "@iconify/react";
 
 const projectInfo = [
   {
@@ -27,15 +25,15 @@ const projectInfo = [
     gitHubRepo: "https://github.com/yiahmed/portfolio_template",
     vercelLink: "https://my-portfolio-yiahmed.vercel.app/",
   },
-  // {
-  //   id: 3,
-  //   title: "AlphaPulse",
-  //   image: "",
-  //   description:
-  //     "LEARN Academy Capstone Project",
-  //   gitHubRepo: "",
-  //   vercelLink: "",
-  // },
+  {
+    id: 3,
+    title: "Firebase Auth React Native",
+    image: "/firebase-auth.png",
+    description:
+      "A simple React Native application displaying a login screen allowing user creation/authentication and sign in functionality using Firebase Auth",
+    gitHubRepo: "https://github.com/yiahmed/auth-native-practice",
+    vercelLink: "",
+  },
 ];
 
 const ProjectCards = () => {
@@ -61,6 +59,7 @@ const ProjectCards = () => {
             <CardMedia
               component="img"
               height="140"
+              className="image-container"
               image={project.image}
               alt="test image"
             />
@@ -77,14 +76,16 @@ const ProjectCards = () => {
                   style={{ animationDelay: "1s" }}
                 />
               </Button>
-              <Button onClick={() => handleVercelClick(project.vercelLink)}>
-                <img
-                  src="/vercel.svg"
-                  alt="next"
-                  width={75}
-                  className="filter-invert"
-                />
-              </Button>
+              {project.vercelLink ? (
+                <Button onClick={() => handleVercelClick(project.vercelLink)}>
+                  <img
+                    src="/vercel.svg"
+                    alt="next"
+                    width={75}
+                    className="filter-invert"
+                  />
+                </Button>
+              ) : null}
             </CardActions>
           </Card>
         </div>
