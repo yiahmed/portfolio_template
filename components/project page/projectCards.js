@@ -28,7 +28,7 @@ const projectInfo = [
   {
     id: 3,
     title: "Firebase Auth React Native",
-    image: "/firebase-auth.png",
+    image: "/firebase-auth.PNG",
     description:
       "A simple React Native application displaying a login screen allowing user creation/authentication and sign in functionality using Firebase Auth",
     gitHubRepo: "https://github.com/yiahmed/auth-native-practice",
